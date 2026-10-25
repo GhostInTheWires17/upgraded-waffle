@@ -1,0 +1,2 @@
+[console_scripts]
+quant-finance-lab = quant_finance_lab.cli:main

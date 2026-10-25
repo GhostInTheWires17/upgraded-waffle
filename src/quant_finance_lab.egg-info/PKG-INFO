@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: quant-finance-lab
+Version: 1.0.0
+Summary: A modular quantitative research laboratory centered on stochastic modelling, Monte Carlo simulation, risk analysis, and financial mathematics.
+Author: Manish Sai, Quant Finance Lab Contributors
+License: MIT
+Keywords: quantitative-finance,monte-carlo,stochastic-processes,financial-mathematics,risk-analysis,drawdown,portfolio-simulation
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.25.0
+Requires-Dist: matplotlib>=3.7.0
+Requires-Dist: scipy>=1.10.0
+Requires-Dist: pandas>=1.5.0
+Provides-Extra: dashboard
+Requires-Dist: streamlit>=1.30.0; extra == "dashboard"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Provides-Extra: all
+Requires-Dist: streamlit>=1.30.0; extra == "all"
+Requires-Dist: pytest>=7.0; extra == "all"
+Requires-Dist: ruff>=0.1.0; extra == "all"
+Dynamic: license-file
