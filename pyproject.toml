@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quant-finance-lab"
+version = "1.0.0"
+description = "A modular quantitative research laboratory centered on stochastic modelling, Monte Carlo simulation, risk analysis, and financial mathematics."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Manish Sai" },
+    { name = "Quant Finance Lab Contributors" }
+]
+keywords = [
+    "quantitative-finance",
+    "monte-carlo",
+    "stochastic-processes",
+    "financial-mathematics",
+    "risk-analysis",
+    "drawdown",
+    "portfolio-simulation"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+
+dependencies = [
+    "numpy>=1.25.0",
+    "matplotlib>=3.7.0",
+    "scipy>=1.10.0",
+    "pandas>=1.5.0",
+]
+
+[project.optional-dependencies]
+dashboard = [
+    "streamlit>=1.30.0",
+]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.1.0",
+]
+all = [
+    "streamlit>=1.30.0",
+    "pytest>=7.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+quant-finance-lab = "quant_finance_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --strict-markers"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
